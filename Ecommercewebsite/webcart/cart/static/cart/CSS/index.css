@@ -1,0 +1,106 @@
+@import 'basic.css';
+
+
+
+
+.my-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.my-container .my-indicators .indicators {
+    background: var(--ternary);
+    border: 1px transparent;
+}
+
+
+.carousel-inner .my-row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+
+/*==================================== CARD CSS============================================================= */
+
+.my_card {
+    /* background: var(--dark); */
+    max-width: 300px;
+    height: 300px;
+    /* box-sizing: content-box; */
+}
+
+.my_card .img {
+    width: 130px;
+    height: 90px;
+    transform: translateX(45%);
+}
+
+.my_card .card-body .card-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight:normal;
+    padding-top: 3rem;
+}
+
+.my_card .card-body .card-text {
+    font-family: 'Nunito', sans-serif;
+    font-size:1.5rem;
+    color:green;
+}
+
+.my_card .card-body .card-text span{
+    color:green;
+    font-size:1.5rem;
+    font-weight: bold;
+}
+
+
+.my_card .cb{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    column-gap: 3rem;
+    position: relative;
+    
+    /* justify-content:space-between; */
+}
+
+/* .my_card .cb .divpr{
+    transform:translateX(-30%)
+} */
+
+.my_card  .cb .addbtn{
+    position: absolute;
+    left: 0px;
+    font-size:0.9rem;   
+}
+
+.my_card  .cb .plus,
+.my_card  .cb .minus{
+    padding:5px 5px;
+    /* transform: translateX(35%); */
+}
+.my_card  .cb .minus .items{
+    padding:1px 2px;
+    /* transform: translateX(-50%); */
+}
+/* .my_card  .cb .addbtn:focus,
+.my_card  .cb .viewbtn:focus{
+    outline:none;
+} */
+.my_card  .cb .viewbtn{
+    position: absolute;
+    left:53%;
+    /* margin-left:1rem; */
+    font-size:0.9rem;
+}
+
+
+/* ======================================Carausel Controls============================================== */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+

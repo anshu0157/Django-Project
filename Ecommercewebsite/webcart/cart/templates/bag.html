@@ -1,0 +1,61 @@
+{% extends 'basic.html' %}
+<!-- Title block -->
+{% block title %} Shopping Cart {% endblock %}
+
+{%block body %}
+<div class="row p-3">
+    <div class="col-7  border border-dark p-2">
+        <div class="">
+            <h2>Cart Items</h2>
+        </div>
+        <hr>
+        <div class="row p-3">
+            <div class="col-4">
+                <!-- <img class="rounded-3" src="/media/{{product.image}}" alt="" placeholder="500x500" width="400" height="500"> -->
+            </div>
+            <div class="col-8">
+            <!-- <h3>{{product.product_name}}</h3>
+            <h5><b>₹ {{product.price}}</b></h5>
+            <p>{{product.product_descrip}}</p>
+            <div>
+            <button id="pr{{product.id}}" class="btn btn-outline-warning cart_ m-2">Add To Cart</button>
+            <button  class="btn btn-outline-success m-2">Buy Now</button>
+            </div> -->
+
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-success px-5">Place Order</button>
+        </div>
+
+    </div>
+    <div class="col-5 border border-dark p-2">
+
+        <h2>Price Details</h2>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js%}
+<script>
+    cart_ = JSON.parse(localStorage.getItem('cart_'));
+    $('#popcart').on('click', 'button.bag', function (cart_) {
+        crtdata = JSON.parse(localStorage.getItem('cart_'));
+        console.log(crtdata);
+        entries = Object.keys(crtdata);
+        data={
+            "cdata":entries
+        }
+        data['cdata'] =JSON.stringify(data['cdata']);
+        $.ajax({
+            "type":'POST',
+            "url":'/cart/bag/',
+            "data": data,
+            "success": success_callback,
+            "error": error_callback
+        });
+    });
+    console.log(cart_);
+</script>
+{%endblock%}

@@ -1,0 +1,17 @@
+:root{
+     --primary:#3DCFD3; 
+    --secondary:#070606;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+    --gold:#f5d20a;
+    --happy:#f5d20a;
+
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: 'Hind', sans-serif;
+}
